@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    background: #282c34;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 7px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__header {
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 3px white;
+    background: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app__stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    margin: auto 0;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 600px) {
+    .app__stats {
+        flex-direction: column;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: center;
+}
+.app__statsCard {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.app__country {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid #fff;
+    color: black;
+    padding: 7px;
+    border-radius: 20px;
+    color: #000;
+}
+
+.app__table {
+    margin: auto;
+}
+
+.app__dropdown {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 7px;
+    font-display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.app__dropdown > label {
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#options {
+    padding: 7px;
+    border-radius: 20px;
+    outline-color: none;
+    background: whitesmoke;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1080px) {
+    .app__stats {
+        align-self: center;
+        min-width: 70vw;
+    }
+    .app__form {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex: 0.3;
+    }
+    .app__statsCard {
+        flex: 0.6;
+    }
+    .app__table {
+        margin: auto;
+        background: linear-gradient(to right, transparent, black, transparent);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        min-width: 65vw;
+    }
 }

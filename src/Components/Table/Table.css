@@ -1,0 +1,41 @@
+.table {
+    margin-top: 7px;
+    height: 50vh;
+    max-width: 720px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: linear-gradient(to right, #f6d365 5%, #fda085 100%);
+}
+
+.table::-webkit-scrollbar {
+    display: none;
+}
+
+#thead > th {
+    background: black;
+    color: #fff;
+    font-weight: 400;
+    font-size: small;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    word-wrap: break-word;
+    height: 36px;
+    padding: 7px;
+}
+
+.tbody > td {
+    font-size: medium;
+    padding: 7px;
+    border-top: 1px solid #000;
+}
+
+@media screen and (max-width: 640px) {
+    .hiddenOnSmall {
+        display: none;
+    }
+    #thead > th {
+        height: 36px;
+        padding: px;
+    }
+}
